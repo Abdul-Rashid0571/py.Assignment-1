@@ -22,3 +22,26 @@
 + ("school", "Which SHS did you attend? "),
 + ("team", "What is your favorite soccer team? ")
 + ]
++ 
++ # Select 2 to 4 optional questions randomly
++ selected_optional = random.sample (optional_quetions, k=random.randint (2, 4))
+
++ # Combine required and selectednoption questions
++ all_questins = required_question + selected_optional
++ responses = {}
+
++ for key, prompt in all_questions:
++ responses[Key] = input(prompt)
+
++ return responses
+
++ def display_summary(responses):
++ print("
++ ---Personlizeed Summary ---")
++ print(f"Hello, {responses.get('name', 'Friend')}!")
+
++ if 'age' in responses:
++ print(f"You are {responses['age']} years old, ", end=' ')
++ if 'color' in responses:
++ print(f"love the color { responses['color']},", end='')
++ 
