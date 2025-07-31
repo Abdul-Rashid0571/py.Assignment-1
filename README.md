@@ -44,4 +44,39 @@
 + print(f"You are {responses['age']} years old, ", end=' ')
 + if 'color' in responses:
 + print(f"love the color { responses['color']},", end='')
++ if 'food' in responses:
++ print(f" and enjoy eating {responses['food' ]}.")
++ else:
++ print()
++ if 'city' in responses:
++ print(f"Life must be awesome in {responses['city']}!")
++ if 'school' in responses:
++ print(f"You went to {responses['school']}! SHS.")
++ if 'team' in responses:
++ print(f"Go {responses['team"]}!")
+
++ def save_to_file(responses, rating):
++ filename = f"{responses.get ('name', 'user')}.txt"
++ with open(filename,'w', encoding='utf-8')as f:
++ f.write("User Summary
++ ")
++ f.write("==========
++ ")
++ for key, value in responses.item()
++ f.write(f"{Key.capitalize()}:
++ ")
++ f.write(f"Rating: {rating}/5
++ ")
++ print(f"Summary saved to {filename}")
+
++ def main():
++ While True:
++ responses = get_user_data()
++ display_summary(responses)
 + 
++ save = input("
++ Do you want to save this summary? (yes/no): ").strip().lower()
++ if save == "yes":
++ While True:
++ try
++ rating = int(input ("Please rate
